@@ -11,7 +11,7 @@ parser.add_argument('--channels', type=int, default=1)
 parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--num_classes', type=int, default=10)
 
-parser.add_argument('--model_path', type=str, default=r'../mnistModel/mnistModel.{epoch:03d}--{loss:.2f}.h5')
+parser.add_argument('--model_path', type=str, default=r'../mnistModel/mnistModel.{epoch:03d}--{acc:.4f}.h5')
 
 
 cfg = parser.parse_args()
