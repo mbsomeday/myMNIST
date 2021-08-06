@@ -12,7 +12,7 @@ def CNN(cfg):
     p2 = layers.MaxPooling2D(pool_size=(2, 2), name='max_pool2')(c2)
     flat = layers.Flatten(name="flatten")(p2)
     drop = layers.Dropout(0.5)(flat)
-    outputs = layers.Dense(cfg.num_classes, activation="relu")(drop)
+    outputs = layers.Dense(cfg.num_classes, activation="softmax")(drop)
     
     model = keras.Model(inputs, outputs, name='mnist model')
     

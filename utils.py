@@ -8,6 +8,7 @@ class myModelCheckpoint(ModelCheckpoint):
         super().__init__(filtpath, **kwargs)
         
     def on_epoch_end(self, epoch, logs=None):
+        print("当前为epoch end")
     
     
     
